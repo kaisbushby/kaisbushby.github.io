@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "removeComments": true,
+    "strict": true,
+    "watch": true,
+    "outDir": "./build/"
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
