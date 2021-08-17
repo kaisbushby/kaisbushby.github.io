@@ -4,13 +4,16 @@
     "moduleResolution": "Node",
     "target": "es5",
     "jsx": "react",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ES6"],
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "removeComments": true,
     "strict": true,
     "watch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
     "outDir": "./build/"
   },
   "exclude": [

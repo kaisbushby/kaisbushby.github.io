@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html",
   filename: "./index.html"
@@ -16,12 +17,17 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
+    contentBase: path.join(__dirname, "build"),
     historyApiFallback: true,
-    hot: true
+    hot: true,
+    compress: true
+
   },
   externals: {
     'react': 'React',
-    'react-dom': "ReactDOM"
+    'react-dom': "ReactDOM",
+    'react-router-dom': 'ReactRouterDOM'
+
   },
   module: {
     rules: [
@@ -56,5 +62,6 @@ module.exports = {
   },
   plugins: [
     htmlPlugin,
+    new BundleAnalyzerPlugin({analyzerMode: "disabled"})
   ]
 };
