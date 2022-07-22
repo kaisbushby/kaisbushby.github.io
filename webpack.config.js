@@ -13,11 +13,13 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   devServer: {
-    contentBase: path.join(__dirname, "build"),
+    static: {
+      directory: path.join(__dirname, "dist")
+    },
     historyApiFallback: true,
     hot: true,
     compress: true

@@ -1,11 +1,12 @@
 import * as React from "react";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./components/navbar";
+import Layout from "./components/layout";
 
 class App extends React.Component<any, any> {
   render() {
     return (
       <div className={"AppWindow"}>
-        <Navbar/>
+        <Layout />
       </div>
     );
   }
