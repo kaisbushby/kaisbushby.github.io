@@ -4,12 +4,12 @@ import styled, {css} from "styled-components";
 
 
 class Footer extends React.Component<any, any> {
-    render() {
-        return (
-            <div className={"navbar"}>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className={"navbar"}>
+      </div>
+    );
+  }
 }
 
 export default Footer;

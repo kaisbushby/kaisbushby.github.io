@@ -10,7 +10,15 @@ module.exports = {
   target: "web",
   mode: 'development',
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".css", ".scss", ".json"],
+    alias: {
+      '@mui/base': '@mui/base/legacy',
+      '@mui/lab': '@mui/lab/legacy',
+      '@mui/material': '@mui/material/legacy',
+      '@mui/styled-engine': '@mui/styled-engine/legacy',
+      '@mui/system': '@mui/system/legacy',
+      '@mui/utils': '@mui/utils/legacy',
+    }
   },
   output: {
     path: path.resolve(__dirname, "dist"),
