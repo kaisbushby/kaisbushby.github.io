@@ -1,6 +1,8 @@
 import * as React from "react";
-import Navbar from "./components/navbar";
+import NavBar from "./components/navBar";
 import Layout from "./components/layout";
+import "bootstrap/dist/css/bootstrap.css"
+import {BrowserRouter} from "react-router-dom";
 
 class App extends React.Component<any, any> {
   render() {
