@@ -6,7 +6,8 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "/*" : ["../*"]
+      "/*" : ["../*"],
+      "~/*" : ["/src"]
     },
     "lib": ["DOM", "DOM.Iterable", "ES6"],
     "sourceMap": true,

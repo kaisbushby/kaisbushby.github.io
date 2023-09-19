@@ -1,0 +1,17 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid gray;
+
+    @media (min-width: 2000px) {
+        height: 10vh;
+        margin: 0 auto;
+    }
+
+    // Triggers when width is less than 800px
+    @media(max-width: 800px){
+
+    }
+}

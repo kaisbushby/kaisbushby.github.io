@@ -1,14 +1,17 @@
 import * as React from "react";
-import NavBar from "./components/navBar";
-import Layout from "./components/layout";
-import "bootstrap/dist/css/bootstrap.css"
-import {BrowserRouter} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Navbar } from "components/sections/Navbar";
+import "./App.scss"
+import { Footer } from "components/sections/Footer";
 
 class App extends React.Component<any, any> {
   render() {
     return (
-      <div className={"AppWindow"}>
-        <Layout />
+      <div className={"app-window"}>
+        <Navbar/>
+        <div className="wrapper">
+          <Outlet/>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.app-window{
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: aliceblue;
+    
+}
+
+.wrapper{
+    
+    border: 1px solid black;
+    margin: 0 auto;
+    // Triggers when width is larger than 2000px
+    
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    @media (min-width: 2000px) {
+        margin: 0 auto;
+    }
+
+    // Triggers when width is less than 800px
+    @media(max-width: 800px){
+
+    }
+}

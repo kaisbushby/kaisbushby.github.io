@@ -1,15 +1,10 @@
-import React, {useEffect, useState} from "react";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
-import styled, {css} from "styled-components";
+import * as React from 'react'
+import './Footer.scss'
 
-
-class Footer extends React.Component<any, any> {
-  render() {
-    return (
-      <div className={"navbar"}>
-      </div>
-    );
-  }
+export const Footer = () => {
+    return(
+        <footer className='footer'>
+            
+        </footer>
+    )
 }
-
-export default Footer;
