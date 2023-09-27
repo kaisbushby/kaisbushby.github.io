@@ -1,9 +1,9 @@
 .navbar{
     position: sticky;
     top: 0;
-    height: 10vh;
-    width: 100%;
+    height: 12vh;
     border-bottom: 1px solid gray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     @media (min-width: 2000px) {
         height: 10vh;
@@ -13,5 +13,49 @@
     // Triggers when width is less than 800px
     @media(max-width: 800px){
 
+    }
+}
+
+$link-color : rgb(0, 0, 0);
+
+.link-box{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    border: 1px solid black;
+    justify-content: end;
+
+    >a{
+        position: relative;
+        text-decoration: none;
+        color: rgb(66, 66, 66);
+        font-size: 24px;
+        font-weight: 400;
+        margin: auto 24px;
+
+        transition: 0.25s ease-in-out;
+
+        &:hover{
+            opacity: 0.6;
+            &::after{
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            
+            transform: scaleX(0);
+            background-color: blue;
+            transition: 0.25s ease-in-out;
+            width: 100%;    
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            transform-origin: bottom left;
+        }
+        
     }
 }
