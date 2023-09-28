@@ -15,6 +15,6 @@ module.exports = merge(common, {
             }))
         }),
         new BundleAnalyzerPlugin({analyzerMode: 'disabled'}),
-        // new CompressionPlugin({algorithm: 'gzip'})
+        new CompressionPlugin({algorithm: 'gzip'})
     ]
 })
