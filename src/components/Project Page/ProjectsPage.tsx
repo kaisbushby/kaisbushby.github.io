@@ -10,8 +10,10 @@ export const ProjectsPage = () => {
             animate={{opacity: 1}}
             exit={{x: window.innerWidth}}
             >
-            
+            <h2 className='project-page-title'>Projects</h2>
             <div className='card-list'>
+                <Card/>
+                <Card/>
                 <Card/>
             </div>
             

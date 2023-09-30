@@ -1,18 +1,29 @@
 import * as React from 'react'
 import {FiExternalLink} from '@react-icons/all-files/fi/FiExternalLink'
 import {IoLogoGithub} from '@react-icons/all-files/io5/IoLogoGithub'
+import { useElementOnScreen } from 'Hooks/useElementOnScreen'
 import "./Card.scss"
 
 interface Props{
+    image: string,
     title: string,
     description: string,
-    image: string
+    techlist: string[],
+    demolink?: string,
+    githublink?: string,
+    id: number
 }
 
 export const Card = () => {
+    const [containerRef, isIntersecting] = useElementOnScreen();
+    
+
+    React.useEffect(() => {
+        console.log(isIntersecting)
+    }, [isIntersecting])
 
     return(
-        <div className='card'>
+        <div className='card' ref={containerRef}>
             <img className='project-image' src='https://uploads-ssl.webflow.com/5d7e8885cad5174a2fcb98d7/64ad807cda5417d65d80aac0_Hoshikawa%2520Sara.jpeg' decoding='async'/>
             <div className='separator'>
                 <div className='overlay'>

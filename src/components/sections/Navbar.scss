@@ -4,6 +4,8 @@
     height: 12vh;
     border-bottom: 1px solid gray;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: inherit;
+    z-index: 4;
 
     @media (min-width: 2000px) {
         height: 10vh;
@@ -31,7 +33,7 @@ $link-color : rgb(0, 0, 0);
         text-decoration: none;
         color: rgb(66, 66, 66);
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 500;
         margin: auto 24px;
 
         transition: 0.25s ease-in-out;
