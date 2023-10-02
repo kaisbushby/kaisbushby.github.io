@@ -7,8 +7,9 @@ export const ContactsPage = () => {
         <motion.div className='contact-page container'
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            exit={{x: window.innerWidth}}
+            exit={{opacity: 0}}
             >
+                <a>aaaa</a>
             
         </motion.div>
     )

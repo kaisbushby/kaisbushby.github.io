@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "components/sections/Navbar";
+import { Navbar } from "Components/Shared/Navbar";
 import "./App.scss"
 
 class App extends React.Component<any, any> {

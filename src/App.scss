@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "/src/Utility/Variables.scss";
 
 body{
     margin: 0;
@@ -29,11 +30,47 @@ body{
     max-width: 2400px;
     margin: 0 auto;
     @media (min-width: 2000px) {
-        
+        width: 60%;
     }
 
     // Triggers when width is less than 800px
     @media(max-width: 800px){
         width: 90%;
+    }
+}
+
+.page-title {
+    position: relative;
+    font-family: 'Barlow Condensed', 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    color: $base-color2;
+    transition: 0.3s ease-in-out;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 5px;
+        background-color: $base-color2;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover{
+        color: $base-color1;
+        &::after{
+            width: 100%;
+            background-color: $base-color1;
+        }
     }
 }

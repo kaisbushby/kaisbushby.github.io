@@ -1,15 +1,23 @@
+@import "/src/Utility/Variables.scss";
+
 .navbar{
     position: sticky;
     top: 0;
     height: 12vh;
-    border-bottom: 1px solid gray;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: inherit;
+    transition: 0.3s ease-in-out;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    
     z-index: 4;
 
-    @media (min-width: 2000px) {
-        height: 10vh;
-        margin: 0 auto;
+    &.active{
+        background-color: rgba($base-color1, 0.05);
+        box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 2000px) {@import "/src/Utility/Variables.scss";
+        height: 8vh;
     }
 
     // Triggers when width is less than 800px
@@ -18,20 +26,17 @@
     }
 }
 
-$link-color : rgb(0, 0, 0);
-
 .link-box{
     height: 100%;
     display: flex;
     flex-direction: row;
     margin-left: auto;
-    border: 1px solid black;
     justify-content: end;
 
     >a{
         position: relative;
         text-decoration: none;
-        color: rgb(66, 66, 66);
+        color: $base-color2;
         font-size: 24px;
         font-weight: 500;
         margin: auto 24px;
@@ -39,7 +44,7 @@ $link-color : rgb(0, 0, 0);
         transition: 0.25s ease-in-out;
 
         &:hover{
-            opacity: 0.6;
+            color: $base-color1;
             &::after{
                 transform: scaleX(1);
                 transform-origin: bottom left;
@@ -50,11 +55,11 @@ $link-color : rgb(0, 0, 0);
             position: absolute;
             
             transform: scaleX(0);
-            background-color: blue;
+            background-color: $base-color1;
             transition: 0.25s ease-in-out;
             width: 100%;    
             height: 4px;
-            bottom: -5px;
+            bottom: -10px;
             left: 0;
             transform-origin: bottom left;
         }
