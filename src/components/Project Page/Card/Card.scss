@@ -11,13 +11,31 @@
     border-radius: 5px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
     overflow: hidden;
-    transition: 0.3s ease-in-out;
+    transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s;
+    // transition: 0.3s box-shadow ease-in-out;
 
     //font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-family: 'Barlow Condensed', 'M PLUS Rounded 1c', sans-serif;
 
+    &.hidden{
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: 2s all ease-in-out;
+    }
+
+    &.show{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+
     &:hover {
         box-shadow: 0 50px 100px rgba(50, 50, 93, .2), 0 15px 35px rgba(50, 50, 93, .4), 0 5px 15px rgba(0, 0, 0, .4);
+        
+        .project-image{
+            transform: scale(1.05);
+        }
         .separator {
             transform: translateX(18px);
             .top {
@@ -107,16 +125,19 @@
         background-color: white;
         clip-path: polygon(100% 100%, 100% 0%, 13.25% 0%, 6.5% 50%, 13.25% 100%);
         
-        transition: clip-path 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 }
 
 
 .project-image {
-    width: 80%;
+    //width: 80%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+
+    transition: 0.3s ease-in-out;
 }
 
 .project-details {

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {FiExternalLink} from '@react-icons/all-files/fi/FiExternalLink'
 import {IoLogoGithub} from '@react-icons/all-files/io5/IoLogoGithub'
-import { useElementOnScreen } from 'Hooks/useElementOnScreen'
 import "./Card.scss"
+import { useInView } from 'framer-motion'
 
 interface Props{
     image: string,
@@ -15,16 +15,17 @@ interface Props{
 }
 
 export const Card = () => {
-    const [containerRef, isIntersecting] = useElementOnScreen();
+    const ref = React.useRef(null)
+    const isInView = useInView(ref, {margin: "-100px 0px -100px 0px"})
     
 
     React.useEffect(() => {
-        console.log(isIntersecting)
-    }, [isIntersecting])
+        console.log(isInView)
+    }, [isInView])
 
     return(
-        <div className='card' ref={containerRef}>
-            <img className='project-image' src='https://uploads-ssl.webflow.com/5d7e8885cad5174a2fcb98d7/64ad807cda5417d65d80aac0_Hoshikawa%2520Sara.jpeg' decoding='async'/>
+        <div className={`card ${isInView ? 'show' : 'hidden'}`} ref={ref}>
+            <img className='project-image' src='https://www.cio.com/wp-content/uploads/2023/05/iStock-image-Article-4-1148233882.jpg' decoding='async'/>
             <div className='separator'>
                 <div className='overlay'>
                     <div className='top color1'/>

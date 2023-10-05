@@ -11,9 +11,7 @@ export const Routing = () => {
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-                
                 <Route element={<App />}>
-                    
                     <Route path={'/'} element={<MainPage />} />
                     <Route path={'/projects'} element={<ProjectsPage />} />
                     <Route path={'/contact'} element={<ContactsPage />} />
