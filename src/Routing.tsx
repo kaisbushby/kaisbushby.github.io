@@ -1,5 +1,5 @@
 import App from 'App'
-import { WorksPage } from 'Components/Contacts Page/WorkPage'
+import { WorksPage } from 'Components/Works Page/WorkPage'
 import { ErrorPage } from 'Components/Error Page/ErrorPage'
 import { MainPage } from 'Components/Main Page/MainPage'
 import { ProjectsPage } from 'Components/Project Page/ProjectsPage'
