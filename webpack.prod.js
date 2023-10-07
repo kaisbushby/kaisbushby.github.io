@@ -4,6 +4,7 @@ const path = require('path')
 const dotenv = require('dotenv')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CompressionPlugin = require('compression-webpack-plugin')
+const {DefinePlugin} = require('webpack');
 
 module.exports = merge(common, {
     mode: 'production',
