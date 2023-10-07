@@ -24,10 +24,10 @@ export const Navbar = () => {
     return (
         <nav className={`navbar ${isOnTop ? "" : "active"}`}>
             <div className='container nav-links'>
-                <img className='logo'/>
+                <img alt={''} className='logo'/>
                 <div className='link-box'>
                     <Link to={'/projects'}>Projects</Link>
-                    <Link to={'/contact'}>Contact</Link>
+                    <Link to={'/work'}>Work</Link>
                 </div>
 
             </div>

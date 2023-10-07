@@ -1,0 +1,23 @@
+@import "/src/Utility/Variables.scss";
+
+.work-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 100px 0;
+
+    .line{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 10px;
+        padding: inherit;
+        background: $base-color1;
+        box-sizing: border-box;
+        border-radius: 5px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: top;
+    }
+}

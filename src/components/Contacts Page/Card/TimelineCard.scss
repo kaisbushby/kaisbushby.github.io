@@ -1,0 +1,158 @@
+@import "/src/Utility/Variables.scss";
+
+.timeline-card {
+    display: flex;
+    position: relative;
+
+    font-family: 'Barlow Condensed', 'M PLUS Rounded 1c', sans-serif;
+    color: $base-color2;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 0.75rem;
+    }
+
+    p {
+        font-size: 1.35rem;
+    }
+
+    // Somehow this effects the even components
+    &:nth-child(odd) {
+        direction: rtl;
+
+        .timeline-card-info {
+            direction: ltr;
+            margin-left: 55%;
+
+            >div {
+                padding: 30px 30px 30px 60px;
+            }
+
+            &.hidden {
+                transform: translateX(100%);
+            }
+        }
+
+        .timeline-card-date {
+            right: 50%;
+
+            &.hidden {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    // Somehow this effects the odd components
+    &:nth-child(even) {
+        direction: ltr;
+
+        .timeline-card-info {
+            direction: rtl;
+            margin-right: 55%;
+
+            >div {
+                padding: 30px 60px 30px 30px;
+            }
+
+            &.hidden {
+                transform: translateX(-100%);
+            }
+
+
+        }
+
+        .timeline-card-date {
+            left: 50%;
+
+            &.hidden {
+                transform: translateX(100%);
+            }
+        }
+    }
+}
+
+.timeline-card-info {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    width: 50%;
+    margin: 30px 0;
+    transition: all 1s ease-in-out;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: opacity transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s;
+
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+
+    .timeline-card-info-text {
+        box-sizing: border-box;
+        background-color: rgba($base-color1, 0.3);
+    }
+
+    .timeline-card-info-title {
+        position: relative;
+
+    }
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    &.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &:hover {
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .2), 0 15px 35px rgba(50, 50, 93, .4), 0 5px 15px rgba(0, 0, 0, .4);
+    }
+
+    .tech-list {
+        display: flex;
+        list-style: none;
+        column-gap: 12px;
+        padding: 0;
+
+        li {
+            $link-color : rgb(84, 84, 255);
+
+            font-size: 1.15rem;
+            font-weight: 500;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid $link-color;
+            transition: 0.3s ease-in-out;
+            -webkit-user-select: none;
+            user-select: none;
+
+            &:hover {
+                color: white;
+                background-color: $link-color;
+            }
+        }
+    }
+
+}
+
+.timeline-card-date {
+    position: absolute;
+    top: 0%;
+    padding: 50px;
+    transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    &.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

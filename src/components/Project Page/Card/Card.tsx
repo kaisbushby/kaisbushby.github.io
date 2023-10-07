@@ -16,16 +16,16 @@ interface Props{
 
 export const Card = () => {
     const ref = React.useRef(null)
-    const isInView = useInView(ref, {margin: "-100px 0px -100px 0px"})
+    const isInView = useInView(ref, {margin: "-30% 0px -20% 0px"})
     
 
     React.useEffect(() => {
         console.log(isInView)
-    }, [isInView])
+    }, [])
 
     return(
         <div className={`card ${isInView ? 'show' : 'hidden'}`} ref={ref}>
-            <img className='project-image' src='https://www.cio.com/wp-content/uploads/2023/05/iStock-image-Article-4-1148233882.jpg' decoding='async'/>
+            <img alt='' className='project-image' src='https://www.cio.com/wp-content/uploads/2023/05/iStock-image-Article-4-1148233882.jpg' decoding='async'/>
             <div className='separator'>
                 <div className='overlay'>
                     <div className='top color1'/>
