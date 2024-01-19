@@ -24,14 +24,12 @@
 
     // Somehow this effects the even components
     &:nth-child(odd) {
-        direction: rtl;
-
         .timeline-card-info {
             direction: ltr;
             margin-left: 55%;
 
-            >div {
-                padding: 30px 30px 30px 60px;
+            .timeline-card-info-text, .timeline-card-info-title {
+                padding-left: 60px;
             }
 
             &.hidden {
@@ -50,14 +48,12 @@
 
     // Somehow this effects the odd components
     &:nth-child(even) {
-        direction: ltr;
-
         .timeline-card-info {
             direction: rtl;
             margin-right: 55%;
 
-            >div {
-                padding: 30px 60px 30px 30px;
+            .timeline-card-info-text, .timeline-card-info-title {
+                padding-right: 60px;
             }
 
             &.hidden {
@@ -89,6 +85,14 @@
     transition: opacity transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s;
 
     box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+
+    .timeline-card-info-text, .timeline-card-info-title{
+        padding: 30px;
+
+        @media (max-width: 1440px) {
+            padding: 20px;
+        }
+    }
 
     .timeline-card-info-text {
         box-sizing: border-box;

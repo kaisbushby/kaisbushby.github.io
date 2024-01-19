@@ -13,8 +13,8 @@ export const WorksPage = () => {
 
     return (
         <motion.div className='contact-page container'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, x:"-10%" }}
+            animate={{ opacity: 1, x:"0%"}}
             exit={{ opacity: 0 }}
         >
             <h2 className='page-title'>
@@ -22,7 +22,7 @@ export const WorksPage = () => {
             </h2>
 
             <div className='work-timeline'>
-                <motion.div className='line' style={{ scaleY: scrollYProgress, translateX: "-50%" }}/>
+                <motion.div className='line' style={{ scaleY: scrollYProgress}}/>
                 <TimelineCard />
                 <TimelineCard />
                 <TimelineCard />
