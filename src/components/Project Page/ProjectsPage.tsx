@@ -13,7 +13,7 @@ export const ProjectsPage = () => {
         <motion.div className='projects-page container'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity:0 }}
+            exit={{ opacity:0, translateX:"-100%" }}
         >
             <h2 className='page-title'>
                 Projects
